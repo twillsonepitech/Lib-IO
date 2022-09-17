@@ -16,6 +16,8 @@
 # define EXIT_FAILURE_STREAM    (-1)
 #endif // EXIT_FAILURE_STREAM
 
+#define INIT_INTEGER    (0)
+
 typedef FILE *(*__io_stream_open_fn_t)(const char *, const char *);
 typedef int (*__io_stream_close_fn_t)(FILE *);
 

@@ -73,7 +73,7 @@ tests_run:	${TESTS_OBJS}
 valgrind:	CFLAGS	+=	-g3
 valgrind:	${TESTS_OBJS}
 	${CC} ${TESTS_LIBS} ${TESTS_OBJS} -o ${TESTS_BIN_NAME}
-	valgrind --trace-children=yes --quiet ./${TESTS_BIN_NAME}
+	valgrind --trace-children=yes -s --leak-check=full --show-leak-kinds=all ./${TESTS_BIN_NAME}
 	${RM} ${TESTS_OBJS}
 	${RM} ${TESTS_BIN_NAME}
 
